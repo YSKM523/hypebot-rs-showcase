@@ -1,49 +1,61 @@
-<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="720" fill="#0A1321"/>
-  <text x="60" y="72" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="34" font-weight="700">hypebot-rs architecture overview</text>
-  <text x="60" y="108" fill="#94A3B8" font-family="Arial, sans-serif" font-size="20">A trading system layout built around separation of concerns.</text>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="760" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0a1321"/>
+      <stop offset="1" stop-color="#13233a"/>
+    </linearGradient>
+  </defs>
 
-  <rect x="60" y="160" width="240" height="96" rx="18" fill="#0F172A" stroke="#1D4ED8"/>
-  <text x="92" y="204" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="24" font-weight="700">HlWsClient</text>
-  <text x="92" y="232" fill="#7DD3FC" font-family="Arial, sans-serif" font-size="16">heartbeat · stale detect · reconnect</text>
+  <rect width="1200" height="760" fill="url(#bg)"/>
 
-  <rect x="340" y="160" width="240" height="96" rx="18" fill="#0F172A" stroke="#0EA5E9"/>
-  <text x="388" y="204" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="24" font-weight="700">MarketFeed</text>
-  <text x="374" y="232" fill="#7DD3FC" font-family="Arial, sans-serif" font-size="16">typed market events and candle flow</text>
+  <text x="60" y="74" fill="#f8fafc" font-family="Verdana, Arial, sans-serif" font-size="34" font-weight="700">hypebot-rs architecture overview</text>
+  <text x="60" y="110" fill="#94a3b8" font-family="Verdana, Arial, sans-serif" font-size="20">A clearer view of how feed handling, strategy logic, execution, and recovery are separated.</text>
 
-  <rect x="620" y="160" width="250" height="96" rx="18" fill="#0F172A" stroke="#10B981"/>
-  <text x="664" y="204" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="24" font-weight="700">SymbolRunner</text>
-  <text x="660" y="232" fill="#6EE7B7" font-family="Arial, sans-serif" font-size="16">one market, one lifecycle group</text>
+  <rect x="60" y="156" width="1080" height="540" rx="28" fill="#0b1728" stroke="#253750" stroke-width="2"/>
 
-  <rect x="910" y="160" width="230" height="96" rx="18" fill="#0F172A" stroke="#A855F7"/>
-  <text x="944" y="204" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="24" font-weight="700">Strategy</text>
-  <text x="938" y="232" fill="#C4B5FD" font-family="Arial, sans-serif" font-size="16">breakout retest and risk rules</text>
+  <rect x="108" y="206" width="220" height="104" rx="18" fill="#0d2238" stroke="#1d4ed8" stroke-width="1.5"/>
+  <text x="138" y="246" fill="#e2e8f0" font-family="Verdana, Arial, sans-serif" font-size="24" font-weight="700">HlWsClient</text>
+  <text x="138" y="276" fill="#7dd3fc" font-family="Verdana, Arial, sans-serif" font-size="16">subscriptions, heartbeat, reconnect</text>
 
-  <rect x="210" y="360" width="260" height="108" rx="18" fill="#0F172A" stroke="#22C55E"/>
-  <text x="248" y="408" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="24" font-weight="700">OrderExecutor</text>
-  <text x="240" y="438" fill="#86EFAC" font-family="Arial, sans-serif" font-size="16">serialized exchange calls</text>
-  <text x="240" y="460" fill="#86EFAC" font-family="Arial, sans-serif" font-size="16">designed to avoid nonce conflicts</text>
+  <rect x="382" y="206" width="220" height="104" rx="18" fill="#0f243a" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="420" y="246" fill="#e2e8f0" font-family="Verdana, Arial, sans-serif" font-size="24" font-weight="700">MarketFeed</text>
+  <text x="420" y="276" fill="#7dd3fc" font-family="Verdana, Arial, sans-serif" font-size="16">typed events and candle updates</text>
 
-  <rect x="510" y="360" width="210" height="108" rx="18" fill="#0F172A" stroke="#F59E0B"/>
-  <text x="560" y="408" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="24" font-weight="700">State</text>
-  <text x="542" y="438" fill="#FCD34D" font-family="Arial, sans-serif" font-size="16">restores setup context across restarts</text>
+  <rect x="656" y="206" width="236" height="104" rx="18" fill="#12261d" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="688" y="246" fill="#e2e8f0" font-family="Verdana, Arial, sans-serif" font-size="24" font-weight="700">SymbolRunner</text>
+  <text x="688" y="276" fill="#86efac" font-family="Verdana, Arial, sans-serif" font-size="16">one market, one lifecycle group</text>
 
-  <rect x="760" y="360" width="230" height="108" rx="18" fill="#0F172A" stroke="#EF4444"/>
-  <text x="812" y="408" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="24" font-weight="700">Watchdog</text>
-  <text x="786" y="438" fill="#FCA5A5" font-family="Arial, sans-serif" font-size="16">HTTP verification and recovery guardrails</text>
+  <rect x="946" y="206" width="146" height="104" rx="18" fill="#201533" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="972" y="246" fill="#e2e8f0" font-family="Verdana, Arial, sans-serif" font-size="24" font-weight="700">Strategy</text>
+  <text x="972" y="276" fill="#c4b5fd" font-family="Verdana, Arial, sans-serif" font-size="16">signal logic</text>
 
-  <rect x="440" y="548" width="320" height="100" rx="18" fill="#0F172A" stroke="#38BDF8"/>
-  <text x="486" y="592" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="24" font-weight="700">Notifications + Dry Run</text>
-  <text x="484" y="622" fill="#7DD3FC" font-family="Arial, sans-serif" font-size="16">safer testing and better runtime visibility</text>
+  <rect x="232" y="410" width="278" height="116" rx="18" fill="#10281d" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="264" y="454" fill="#e2e8f0" font-family="Verdana, Arial, sans-serif" font-size="26" font-weight="700">OrderExecutor</text>
+  <text x="264" y="486" fill="#86efac" font-family="Verdana, Arial, sans-serif" font-size="16">serialized exchange calls</text>
+  <text x="264" y="510" fill="#86efac" font-family="Verdana, Arial, sans-serif" font-size="16">reduced nonce and race-condition risk</text>
 
-  <path d="M300 208H340" stroke="#334155" stroke-width="4"/>
-  <path d="M580 208H620" stroke="#334155" stroke-width="4"/>
-  <path d="M870 208H910" stroke="#334155" stroke-width="4"/>
-  <path d="M745 256V320" stroke="#334155" stroke-width="4"/>
-  <path d="M600 256V320" stroke="#334155" stroke-width="4"/>
-  <path d="M480 256V320" stroke="#334155" stroke-width="4"/>
-  <path d="M1025 256V320" stroke="#334155" stroke-width="4"/>
-  <path d="M340 468V520H600V548" stroke="#334155" stroke-width="4"/>
-  <path d="M615 468V548" stroke="#334155" stroke-width="4"/>
-  <path d="M875 468V520H600" stroke="#334155" stroke-width="4"/>
+  <rect x="548" y="410" width="226" height="116" rx="18" fill="#2a1f08" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="584" y="454" fill="#e2e8f0" font-family="Verdana, Arial, sans-serif" font-size="26" font-weight="700">State</text>
+  <text x="584" y="486" fill="#fcd34d" font-family="Verdana, Arial, sans-serif" font-size="16">restore setup context</text>
+  <text x="584" y="510" fill="#fcd34d" font-family="Verdana, Arial, sans-serif" font-size="16">survive restarts more cleanly</text>
+
+  <rect x="812" y="410" width="220" height="116" rx="18" fill="#321414" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="844" y="454" fill="#e2e8f0" font-family="Verdana, Arial, sans-serif" font-size="26" font-weight="700">Watchdog</text>
+  <text x="844" y="486" fill="#fca5a5" font-family="Verdana, Arial, sans-serif" font-size="16">runtime verification and recovery</text>
+  <text x="844" y="510" fill="#fca5a5" font-family="Verdana, Arial, sans-serif" font-size="16">for abnormal feed or HTTP conditions</text>
+
+  <rect x="406" y="574" width="390" height="82" rx="18" fill="#0d2238" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="442" y="608" fill="#e2e8f0" font-family="Verdana, Arial, sans-serif" font-size="24" font-weight="700">Notifications and dry-run support</text>
+  <text x="442" y="634" fill="#7dd3fc" font-family="Verdana, Arial, sans-serif" font-size="16">safer testing, clearer runtime visibility, easier operator feedback</text>
+
+  <path d="M328 258H382" stroke="#334155" stroke-width="4"/>
+  <path d="M602 258H656" stroke="#334155" stroke-width="4"/>
+  <path d="M892 258H946" stroke="#334155" stroke-width="4"/>
+  <path d="M774 310V360" stroke="#334155" stroke-width="4"/>
+  <path d="M774 360H371V410" stroke="#334155" stroke-width="4"/>
+  <path d="M774 360H661V410" stroke="#334155" stroke-width="4"/>
+  <path d="M774 360H922V410" stroke="#334155" stroke-width="4"/>
+  <path d="M371 526V550H601V574" stroke="#334155" stroke-width="4"/>
+  <path d="M661 526V574" stroke="#334155" stroke-width="4"/>
+  <path d="M922 526V550H601" stroke="#334155" stroke-width="4"/>
 </svg>
