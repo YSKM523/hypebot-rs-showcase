@@ -1,8 +1,8 @@
-//! Public illustrative Rust sample for the `hypebot-rs` showcase.
+//! Public Rust showcase crate for the `hypebot-rs` repository.
 //!
 //! This is not the private production source code.
-//! It exists to show the architectural style of the system:
-//! typed events, async runners, serialized execution, and explicit boundaries.
+//! It is a small illustrative crate that shows the system style:
+//! typed events, async channels, symbol runners, and serialized execution.
 
 use tokio::sync::mpsc;
 

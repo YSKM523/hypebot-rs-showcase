@@ -1,0 +1,9 @@
+[package]
+name = "hypebot-rs-showcase"
+version = "0.1.0"
+edition = "2021"
+description = "Public Rust showcase crate for hypebot-rs architecture"
+license = "MIT"
+
+[dependencies]
+tokio = { version = "1", features = ["sync"] }

@@ -54,7 +54,8 @@ This project is not just "a bot that happens to be written in Rust." The system 
 
 Public illustrative Rust example:
 
-- [docs/rust_showcase_example.rs](./docs/rust_showcase_example.rs)
+- [Cargo.toml](./Cargo.toml)
+- [src/lib.rs](./src/lib.rs)
 
 ```rust
 use tokio::sync::mpsc;

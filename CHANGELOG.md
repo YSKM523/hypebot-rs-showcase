@@ -6,6 +6,7 @@
 - aligned architecture component names with the actual private implementation
 - kept the showcase positioned as a reliability-first trading system rather than a generic bot
 - added a public illustrative Rust example so visitors can immediately see the project's Rust-first architecture style
+- moved the public Rust example into a real lightweight crate so GitHub can classify the repository as Rust instead of leaving language stats empty
 
 ## 2026-04-05
 
