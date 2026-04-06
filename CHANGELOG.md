@@ -2,6 +2,7 @@
 
 ## 2026-04-06
 
+- renamed the public repo identity from `hypebot-rust-showcase` to `hypebot-rust-architecture`
 - renamed the public showcase identity to `hypebot-rust-showcase`
 - made Rust more explicit in the public-facing README title and project snapshot
 - aligned architecture component names with the actual private implementation

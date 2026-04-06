@@ -1,5 +1,5 @@
 [package]
-name = "hypebot-rust-showcase"
+name = "hypebot-rust-architecture"
 version = "0.1.0"
 edition = "2021"
 description = "Public Rust showcase crate for hypebot-rs architecture"

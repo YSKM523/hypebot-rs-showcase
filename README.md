@@ -11,12 +11,12 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/YSKM523/hypebot-rust-showcase/issues/new">Request walkthrough</a> ·
+  <a href="https://github.com/YSKM523/hypebot-rust-architecture/issues/new">Request walkthrough</a> ·
   <a href="./CHANGELOG.md">Changelog</a> ·
   <a href="https://github.com/YSKM523">@YSKM523</a>
 </p>
 
-# hypebot-rust-showcase | Rust Hyperliquid Trading Bot
+# hypebot-rust-architecture | Rust Hyperliquid Trading Bot
 
 A public-facing showcase for a private Rust-based Hyperliquid trading bot built with production-grade architecture: typed market data pipelines, per-symbol runners, serialized order execution, persistent state, dry-run support, and long-running websocket resilience.
 
@@ -142,7 +142,7 @@ Not "buy when X crosses Y" — this encodes market structure, volatility context
 
 ## Links
 
-- Showcase: [YSKM523/hypebot-rust-showcase](https://github.com/YSKM523/hypebot-rust-showcase)
+- Showcase: [YSKM523/hypebot-rust-architecture](https://github.com/YSKM523/hypebot-rust-architecture)
 - Private source: `YSKM523/hypebot-rs`
 - Changelog: [CHANGELOG.md](./CHANGELOG.md)
-- Contact: [open an issue](https://github.com/YSKM523/hypebot-rust-showcase/issues/new)
+- Contact: [open an issue](https://github.com/YSKM523/hypebot-rust-architecture/issues/new)
