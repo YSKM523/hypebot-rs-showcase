@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/banner.svg" alt="hypebot-rs banner" width="100%" />
+  <img src="./assets/banner.png" alt="hypebot-rs banner" width="100%" />
 </p>
 
 <p align="center">
@@ -55,7 +55,7 @@ The result is not positioned as a generic bot template. It is positioned as a tr
 
 ## Architecture Preview
 
-![hypebot-rs architecture overview](assets/architecture.svg)
+![hypebot-rs architecture overview](assets/architecture.png)
 
 ### Architecture Notes
 
